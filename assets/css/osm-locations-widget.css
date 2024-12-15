@@ -1,0 +1,83 @@
+.elementor-osm-locations-widget {
+    display: flex;
+    margin: 20px 0;
+}
+
+.locations-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.locations-list {
+    flex: 0 0 400px;
+    overflow-y: auto;
+    max-height: 600px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.locations-list h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.location-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.location-item:hover,
+.location-item.active {
+    background-color: #f5f5f5;
+}
+
+.location-info h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.location-info .status {
+    color: #4CAF50;
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.location-info .phone {
+    color: #666;
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.location-info .description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+#osm-map {
+    flex: 1;
+    height: 600px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .locations-container {
+        flex-direction: column;
+    }
+
+    .locations-list {
+        flex: none;
+        max-height: 400px;
+    }
+
+    #osm-map {
+        height: 400px;
+    }
+}
